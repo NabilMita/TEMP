@@ -1,0 +1,168 @@
+<style type="text/css">
+body {
+    margin: 0;
+    background-color: #f5f5f6;
+  }
+  .body-container{
+    padding: 50px 150px;
+    font-family: Ubuntu;
+  }
+  .my-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .app-container {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgb(33 33 38 / 20%);
+    display: flex;
+    flex-direction: column;
+    padding: 19px;
+    margin-top: 50px;
+  }
+  .app-container:hover{
+    box-shadow: 0 4px 18px rgb(33 33 38 / 20%);
+  }
+  .app-logo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .applink{
+    text-decoration: none;
+    color: black;
+  }</style><script runat="server">
+  Platform.Load('Core','1.1.1');
+  var session = Platform.Request.GetCookieValue('BytelSession');
+  Variable.SetValue('@sessionFromSSJS', session);
+</script>%%[ VAR @authDE, @session SET @authDE = 'ENT.authDE' SET @session = @sessionFromSSJS SET @BU = Lookup(@authDE, 'BU', 'session', @session ) IF @BU == 'admin' then ]%%<div class="body-container">
+ <div style=" font-weight: 600; ">
+  Mes applications %%=v(@BU)=%%</div><div class="my-apps">
+  <div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1847,'BU','restreint'))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1847, 'BU','restreint'))=%%">KP MFO</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(606))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(606))=%%">Demande Historisation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(640))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(640))=%%">Parametrage Migration-Acquisition</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2005))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2005))=%%">Fusion Parametrage Migration-Acquisition</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(702))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(702))=%%">Prospect Demande Historisation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1064))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1064))=%%">Referentiel Campagnes</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1250))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1250))=%%">Creation de DE en masse</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%">Matrice de lissage SMS</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1185))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1185))=%%">Jiravos</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%">App Finder</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%">Meteo V1</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1187))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1187))=%%">Purge DE (Nikita)</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(622))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(622))=%%">Supervision des demandes d'historisation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1323))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1323))=%%">COURRIER - SMS 1 Reponse </a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1295))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1295))=%%">Cr&eacute;ation CAV</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(657,'BU','restreint'))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(657,'BU','restreint'))=%%">Test IHM Cajoline</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(595))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(595))=%%">Dashboard Monitoring</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1744))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1744))=%%">Supervision Automation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2014))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2014))=%%">Potamia</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2138))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2138))=%%">Supervision SMS</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2124))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2124))=%%">Meteor</a></div></div></div></div> %%[ ELSEIF @BU == 'marketing' then ]%%<div class="body-container">
+ <div style=" font-weight: 600; ">
+  Mes applications %%=v(@BU)=%%</div><div class="my-apps">
+  <div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(606))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(606))=%%">Demande Historisation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(640))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(640))=%%">Parametrage Migration-Acquisition</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1064))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1064))=%%">Referentiel Campagnes</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1250))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1250))=%%">Creation de DE en masse</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%">Matrice de lissage SMS</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%">App Finder</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%">Meteo V1</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1323))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1323))=%%">COURRIER - SMS 1 Reponse </a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(657,'BU','restreint'))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(657,'BU','restreint'))=%%">Test IHM Cajoline</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1295))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1295))=%%">Cr&eacute;ation CAV</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1847,'BU','restreint'))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1847, 'BU','restreint'))=%%">KP MFO en test</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2014))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2014))=%%">Potamia</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2138))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2138))=%%">Supervision SMS</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2124))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(2124))=%%">Meteor</a></div></div></div></div> %%[ ELSEIF @BU == 'prospect' then ]%%<div class="body-container">
+ <div style=" font-weight: 600; ">
+  Mes applications %%=v(@BU)=%%</div><div class="my-apps">
+  <div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(702))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(702))=%%">Prospect Demande Historisation</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(667))=%%">Matrice de lissage SMS</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(602))=%%">App Finder</a></div></div><div class="app-container">
+   <div class="app-logo">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%"><img src="https://image.infos.bouyguestelecom.fr/lib/fe8f13727660077471/m/1/d9c8020d-ea84-4ab5-a0c4-98f6ff17f52b.png" style=" height: 45px;width: 150px;"></a></div><div style="text-align: center;">
+    <a class="applink" href="%%=RedirectTo(CloudPagesURL(1710))=%%">Meteo V1</a></div></div></div></div> %%[ ENDIF ]%%
